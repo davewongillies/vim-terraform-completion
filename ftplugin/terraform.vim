@@ -56,3 +56,6 @@ else
     silent! map <unique> <buffer> <Leader>rr :call terraformcomplete#Run()<CR>
 end
 
+if exists('g:loaded_deoplete')
+    let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
+endif
